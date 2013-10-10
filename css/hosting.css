@@ -1,0 +1,52 @@
+.pricing_table {
+	height: 300px;
+	background: #fafafa;
+	text-align: center;
+	border: 3px solid #ccc;
+	border-radius: 5px;
+}
+
+.pricing_table li {
+	list-style-type: none;
+	line-height: 30px;
+}
+
+.pricing_table h3 {
+	background: #f79b37;
+	padding: 12px;
+	color: #fff;
+	line-height: 15px;
+}
+
+.pricing_table small {
+	color: #fff;
+	font-weight: 100;
+}
+
+.price {
+	color: #333;
+	font-size: 25px;
+	font-weight: bold;
+	background: #ccc;
+	padding: 15px 0px 10px 0px;
+}
+
+.featured h3 {
+	background: #e77c08;
+}
+
+.pricing_table a:hover {
+	text-decoration: none;
+	color: #333;
+}
+
+body#home a#nav-home,
+body#hosting a#nav-hosting,
+body#webdesign a#nav-webdesign,
+body#contact a#nav-contact {
+	background: #ccc;
+}
+
+.navi a {
+	color: #333;
+}
