@@ -3,24 +3,10 @@
   -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
  }
 
-.lead_sub {
-	font-weight: 100;
-	font-size: 24px;
-}
 
 h3 {
 	font-weight: 100;
 	color: #666;
-}
-
-.middle {
-	margin-left: 300px;
-	margin-top: 40px;
-}
-
-.middle a:hover {
-	text-decoration: none;
-	color: #fff;
 }
 
 /*--------------border top-------------*/
@@ -83,15 +69,14 @@ body#contact a#nav-contact {
    -webkit-transition: color .15s ease-in-out;
 }
 
-/*--------------services-------------*/
-.center {
-	text-align: center;
-}
-
 /*--------------general section stuff-------------*/
 
 .headline {
 	margin: 50px 50px 10px 50px;
+}
+
+.center {
+	text-align: center;
 }
 
 .sub-headline {
@@ -99,12 +84,28 @@ body#contact a#nav-contact {
 	font-size: 40px;
 }
 
+.lead_sub {
+	font-weight: 100;
+	font-size: 24px;
+}
+
+
 /*--------------section1-------------*/
 
 .section1 {
 	width: 100%;
 	padding: 125px 0px 85px 0px;
 	background: #e77c08;
+}
+
+.middle {
+	margin-left: 300px;
+	margin-top: 40px;
+}
+
+.middle a:hover {
+	text-decoration: none;
+	color: #fff;
 }
 
 /*--------------section2-------------*/
@@ -142,12 +143,14 @@ body#contact a#nav-contact {
 	margin-left: 35px;
 }
 
-/*--------------section4-------------*/
+/*--------------section5-------------*/
 
 .section5 {
 	padding: 85px 0px 50px 0px;
 	width: 100%;
 }
+
+/*--------------section6-------------*/
 
 .section6 {
 	padding: 85px 0px 50px 0px;
@@ -155,14 +158,13 @@ body#contact a#nav-contact {
 	background: #22a7b3;
 }
 
+/*--------------section7-------------*/
+
 .section7 {
 	padding: 50px 0px 50px 0px;
 	width: 100%;
 }
 
-
-
-/*--------------Pricing table-------------*/
 
 /*--------------footer-------------*/
 
@@ -172,6 +174,8 @@ footer {
 	background: #e0e0e0;
 	border-top: solid 3px #c3c3c3; 
 }
+
+/*--------------Social icons-------------*/
 
 .social_icons {
 	font-size: 35px;
