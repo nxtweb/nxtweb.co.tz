@@ -1,3 +1,11 @@
+.logo a h2 {
+	float: left;
+	margin-top: 35px;
+	color: #333
+	letter-spacing: 1px;
+	font-size: 30px;
+}
+
 .pricing_table_web {
 	background: #fff;
 	padding: 25px;
