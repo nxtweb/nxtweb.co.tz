@@ -250,7 +250,7 @@ body#contact a#nav-contact {
 footer {
 	padding: 50px;
 	background: #e0e0e0;
-	border-top: solid 3px #c3c3c3; 
+	border-top: solid 3px #c3c3c3;
 }
 
 /*--------------Social icons-------------*/
@@ -276,3 +276,34 @@ footer {
 	color: #e77c08
 }
 
+#modal_checkbox{
+	float: none;
+	margin: 0;
+}
+
+.modal_input{
+	height: 2em !important;
+}
+
+.modal{
+	text-align: center;
+}
+
+.modal-header h3{
+	background-color: #F79B37;
+	padding: 10px 0;
+}
+
+.modal-body{
+	overflow: hidden;
+}
+
+.modal li{
+	list-style: none;
+}
+
+.help-block{
+	font-style: italic;
+	font-weight: bold;
+	margin: 0 50px 20px 50px;
+}
