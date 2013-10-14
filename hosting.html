@@ -13,6 +13,8 @@
   <link rel="stylesheet" href="css/jquery.bxslider.css">
   <link rel="stylesheet" href="css/buttons.css">
   <link rel="stylesheet" href="css/hosting.css">
+  <script type="text/javascript" src="js/processform.js"></script>
+
 
   <!--[if lt IE 9]>
   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -43,6 +45,8 @@
 			<div class="span12">
 				<p>We offer a range of hosting solutions that fit most user needs. The plans can be scaled according to your needs, and when your business starts growing, we can upgrade your hosting accordingly.</p>
 			</div>
+
+			<!-- Nxt.basic hosting package -->
 			<div class="pricing_table span4">
 				<h3>Nxt.basic <i class="icon-star"></i><br><small>Great for small businesses.</small></h3>
 				<div class="price">
@@ -53,8 +57,10 @@
 					<li><i class="icon-dashboard"></i><strong> Bandwidth:</strong> 1GB</li>
 					<li><i class="icon-envelope-alt"></i><strong> Email accounts:</strong> 2</li>
 				</ul>
-				<a href="#" class="button">Get nxt.basic hosting now</a>
+				<a href="#basic_modal" class="button" data-toggle="modal">Get nxt.basic hosting now</a>
 			</div>
+
+			<!-- Nxt.level hosting package -->
 			<div class="pricing_table featured span4">
 				<h3>Nxt.level <i class="icon-star"></i> <i class="icon-star"></i><br><small>Great value offer for SME's</small></h3>
 				<div class="price">
@@ -65,20 +71,146 @@
 					<li><i class="icon-dashboard"></i><strong> Bandwidth:</strong> 5GB</li>
 					<li><i class="icon-envelope-alt"></i><strong> Email accounts:</strong> 5</li>
 				</ul>
-				<a href="#" class="button">Get nxt.level hosting now</a>
+				<a href="#level_modal" class="button" data-toggle="modal">Get nxt.level hosting now</a>
 			</div>
+
+			<!-- Nxt.future hosting package -->
 			<div class="pricing_table span4">
 				<h3>Nxt.future <i class="icon-star"></i> <i class="icon-star"></i> <i class="icon-star"></i><br><small>For medium to large companies.</small></h3>
 				<div class="price">
-				<p>29$<small>/year</small></p>
+				<p>99$<small>/year</small></p>
 				</div>
 				<ul>
 					<li><i class="icon-hdd"></i><strong> Storage space:</strong> 2GB</li>
 					<li><i class="icon-dashboard"></i><strong> Bandwidth:</strong> 20GB</li>
 					<li><i class="icon-envelope-alt"></i><strong> Email accounts:</strong> 20</li>
 				</ul>
-				<a href="#" class="button">Get nxt.future hosting now</a>
+				<a href="#future_modal" class="button" data-toggle="modal">Get nxt.future hosting now</a>
 			</div>
+		</div>
+		<!--Modal for Nxt.basic package-->
+			<div id="basic_modal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+					<h3 id="myModalLabel">Nxt.basic hosting package</h3>
+				</div>
+				<div class="modal-body">
+					<p>Nxt.basic provides the basic solution for websites and businesses with low hosting requirements. If you expect low amounts of traffic or need to keep your costs down, this is where you should start.</p>
+				<div class="price">
+					<p>29$<small>/year</small></p>
+				</div>
+				<br>
+					<ul>
+						<li><i class="icon-hdd"></i><strong> Storage space:</strong> 100MB</li>
+						<li><i class="icon-dashboard"></i><strong> Bandwidth:</strong> 1GB</li>
+						<li><i class="icon-envelope-alt"></i><strong> Email accounts:</strong> 2</li>
+					</ul>
+		        <form class="orderform" name="orderform" method="post" action="orderform.php">
+				    <fieldset>
+				    	<span class="help-block"><br>Please fill out the information below to order your Nxt.basic hosting package!</span>
+				    	<input type="hidden" name="order" value="nxt.basic">
+					    <input name="name" type="text" class="modal_input" placeholder="Name">
+					    <input name="company" type="text" class="modal_input" placeholder="Company">
+					    <input name="phone" type="text" class="modal_input" placeholder="Phone number">
+					    <input name="email" type="text" class="modal_input" placeholder="Email">
+					    <br>
+						<input id="modal_checkbox" type="checkbox" name="subscribe" value="subscribe" checked/> Subscribe to newsletter
+				    </fieldset>
+
+					</div>
+					<div class="modal-footer">
+						<button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+						<input href="#confirm_modal" data-dismiss="modal" data-toggle="modal" type="button" id="submit" class="btn btn-primary" value="Order package!" onClick="sendorder()"/>
+					</div>
+				</form>
+			</div>
+		<!--Modal for Nxt.level package-->
+			<div id="level_modal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+					<h3 id="myModalLabel">Nxt.level hosting package</h3>
+				</div>
+				<div class="modal-body">
+					<p>Nxt.level is our value package for those who expect a medium amount of traffic on their websites, or who require more webspace than they can get with our nxt.basic package. Most websites fall in this category.</p>
+				<div class="price">
+					<p>59$<small>/year</small></p>
+				</div>
+				<br>
+					<ul>
+						<li><i class="icon-hdd"></i><strong> Storage space:</strong> 500MB</li>
+						<li><i class="icon-dashboard"></i><strong> Bandwidth:</strong> 5GB</li>
+						<li><i class="icon-envelope-alt"></i><strong> Email accounts:</strong> 5</li>
+					</ul>
+
+		        <form class="orderform" name="orderform" method="post" action="orderform.php">
+				    <fieldset>
+				    	<span class="help-block"><br>Please fill out the information below to order your Nxt.level hosting package!</span>
+				    	<input type="hidden" name="order" value="nxt.level">
+					    <input name="name" type="text" class="modal_input" placeholder="Name">
+					    <input name="company" type="text" class="modal_input" placeholder="Company">
+					    <input name="phone" type="text" class="modal_input" placeholder="Phone number">
+					    <input name="email" type="text" class="modal_input" placeholder="Email">
+					    <br>
+						<input id="modal_checkbox" type="checkbox" name="subscribe" value="subscribe" checked/> Subscribe to newsletter
+				    </fieldset>
+
+					</div>
+					<div class="modal-footer">
+						<button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+						<input href="#confirm_modal" data-dismiss="modal" data-toggle="modal" type="button" id="submit" class="btn btn-primary" value="Order package!" onClick="sendorder()"/>
+					</div>
+				</form>
+			</div>
+		<!--Modal for Nxt.future package-->
+			<div id="future_modal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+					<h3 id="myModalLabel">Nxt.future hosting package</h3>
+				</div>
+
+				<div class="modal-body">
+					<p>Nxt.future is our biggest package for the demanding user. Whether you expect a very large amount of visitors, have a big bulk of data to store online or need a lot of email adresses, this package is for you.</p>
+					<div class="price">
+						<p>99$<small>/year</small></p>
+					</div>
+					<br>
+					<ul>
+						<li><i class="icon-hdd"></i><strong> Storage space:</strong> 2GB</li>
+						<li><i class="icon-dashboard"></i><strong> Bandwidth:</strong> 20GB</li>
+						<li><i class="icon-envelope-alt"></i><strong> Email accounts:</strong> 20</li>
+					</ul>
+
+		        <form class="orderform" name="orderform" method="post" action="orderform.php">
+				    <fieldset>
+				    	<span class="help-block"><br>Please fill out the information below to order your Nxt.future hosting package!</span>
+				    	<input type="hidden" name="order" value="nxt.future">
+					    <input name="name" type="text" class="modal_input" placeholder="Name">
+					    <input name="company" type="text" class="modal_input" placeholder="Company">
+					    <input name="phone" type="text" class="modal_input" placeholder="Phone number">
+					    <input name="email" type="text" class="modal_input" placeholder="Email">
+					    <br>
+						<input id="modal_checkbox" type="checkbox" name="subscribe" value="subscribe" checked/> Subscribe to newsletter
+				    </fieldset>
+
+					</div>
+					<div class="modal-footer">
+						<button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+						<input href="#confirm_modal" data-dismiss="modal" data-toggle="modal" type="button" id="submit" class="btn btn-primary" value="Order package!" onClick="sendorder()"/>
+					</div>
+				</form>
+			</div>
+		<!-- Order confirmed modal! -->
+		<div id="confirm_modal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-header">
+		<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+		<h3 id="myModalLabel">Thanks for your order!</h3>
+		</div>
+		<div class="modal-body">
+		<p>Thank you very much for your order. </br>We will review your order and get back to you within 24 hours.</p>
+		</div>
+		<div class="modal-footer">
+		<button data-dismiss="modal" class="btn btn-primary">Close</button>
+		</div>
 		</div>
 	</div>
 </div>
@@ -99,8 +231,8 @@
 	</div>
 </footer>
 
-<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
-<script src="js/bootstrap.js"></script>
+<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
 <script type="text/javascript" src="js/jquery.fitvids.js"></script>
 <script type="text/javascript" src="js/jquery.bxslider.min.js"></script>
 <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
