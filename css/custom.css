@@ -86,7 +86,7 @@ h3 {
 
 .icon-logo2:before {
 	content: "\e000";
-	vertical-align: -0.15em; 
+	vertical-align: -0.15em;
 	font-size: px;
 }
 
@@ -178,7 +178,7 @@ body#contact a#nav-contact {
 .btn_middle {
 	width: 300px;
 	margin-left: auto;
-	margin-right: auto;	
+	margin-right: auto;
 }
 
 .btn_middle a:hover {
@@ -306,4 +306,8 @@ footer {
 	font-style: italic;
 	font-weight: bold;
 	margin: 0 50px 20px 50px;
+}
+
+#order_description{
+	width: 90%;
 }
