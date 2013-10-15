@@ -202,23 +202,33 @@ body#contact a#nav-contact {
 }
 
 .team {
-	margin-top: 50px;
-}
-
-.team img {
-	margin-top: -25px;
-}
-
-.team p {
-	float: right;
-	width: 200px;
-	margin-right: 125px;
+	margin-bottom: 50px;
 }
 
 .team h3 {
-	line-height: 20px;
-	float: left;
-	margin-left: 35px;
+	line-height: 15px;
+}
+
+.team ul {
+	list-style-type: none;
+}
+
+.team li {
+	color: #888;
+	margin-right: 10px;
+}
+
+.team img {
+	filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);  /* For Webkit browsers */
+    filter: gray;  /* For IE 6 - 9 */
+    -webkit-transition: all .6s ease;  /* Transition for Webkit browsers */
+}
+
+.team img:hover {
+	filter: grayscale(0%);
+    -webkit-filter: grayscale(0%);
+    filter: none;
 }
 
 /*--------------section5-------------*/
