@@ -46,3 +46,17 @@
 .slider a:hover {
 	color: #fff;
 }
+
+#myModalLabel{
+	background-color: #22A7B3;
+	color: white;
+}
+
+.greenbutton{
+	background-color: #54A954;
+}
+
+.fast_contact p:hover, .fast_contact.icon-facebook:hover, .fast_contact.icon-linkedin:hover {
+	color: #ccc;
+	cursor: pointer;
+}

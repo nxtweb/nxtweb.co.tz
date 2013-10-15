@@ -10,8 +10,14 @@
 	color: #ccc;
 }
 
-.fast_contact {
+.fast_contact, .fast_contact a {
 	background: #e77c08;
+	color: white;
+}
+
+.fast_contact p:hover, .icon-facebook:hover, .icon-linkedin:hover {
+	color: #333;
+	cursor: pointer;
 }
 
 .pricing_table {
@@ -75,3 +81,4 @@ body#contact a#nav-contact {
    -moz-transition: color .15s ease-in-out;
    -webkit-transition: color .15s ease-in-out;
 }
+
