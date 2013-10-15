@@ -1,0 +1,60 @@
+.fast_contact{
+	background-color: #22A7B3;
+}
+
+body#home a#nav-home,
+body#hosting a#nav-hosting,
+body#webdesign a#nav-webdesign,
+body#contact a#nav-contact {
+	background: #ccc;
+}
+
+.navi a {
+	color: #333;
+}
+
+.navi a:hover {
+	text-decoration: none;
+	color: #ccc;
+	background: none;
+	transition: color .15s ease-in-out;
+   -moz-transition: color .15s ease-in-out;
+   -webkit-transition: color .15s ease-in-out;
+}
+
+h3 {
+	background: #22A7B3;
+	padding: 12px;
+	color: #fff;
+	line-height: 15px;
+}
+
+.span6{
+	background: #fafafa;
+	text-align: center;
+	border: 3px solid #ccc;
+	border-radius: 5px;
+	margin-left: 0;
+	width: 49%;
+}
+
+.button{
+	background-color:#22A7B3;
+}
+
+.logo a h2 {
+    color: black;
+}
+
+.logo a h2:hover {
+    color: rgb(204, 204, 204);
+}
+
+#contactinfo p{
+	padding: 6px;
+	font-style: italic;
+}
+
+#contactinfo iframe{
+
+}

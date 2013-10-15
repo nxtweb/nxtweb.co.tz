@@ -66,3 +66,12 @@ body#contact a#nav-contact {
 .navi a {
 	color: #333;
 }
+
+.navi a:hover {
+	text-decoration: none;
+	color: #ccc;
+	background: none;
+	transition: color .15s ease-in-out;
+   -moz-transition: color .15s ease-in-out;
+   -webkit-transition: color .15s ease-in-out;
+}
