@@ -57,7 +57,7 @@
   <div class="container">
     <div class="row">
       <h1 class="headline center">Contact us!</h1>
-      <p>
+      <p id="contact_p">
         Please feel free to get in touch with us for any inquiries by using any of the methods provided below. We take all inquiries seriously and answer within 24 hours of your request.
       </p>
       <div class="span6 pull-left">
@@ -69,33 +69,43 @@
           <input name="company" type="text" class="modal_input" placeholder="Company">
           <input name="phone" type="text" class="modal_input" placeholder="Phone number">
           <input name="email" type="text" class="modal_input" placeholder="Email">
-          <textarea rows="10" id="order_description" name="order_description" placeholder="Describe your request here"></textarea>
+          <textarea rows="12" id="order_description" name="order_description" placeholder="Describe your request here"></textarea>
           <br>
           <input id="modal_checkbox" type="checkbox" name="subscribe" value="subscribe" checked/> Subscribe to newsletter
           <br><br>
-          <input href="#confirm_modal" data-dismiss="modal" data-toggle="modal" type="button" id="submit" class="button" value="Send request!" onClick="sendorder('orderform_basic')"/>
+          <input href="#confirm_modal" data-dismiss="modal" data-toggle="modal" type="button" id="submit" class="button button-caution" value="Send request!" onClick="sendorder('contactform')"/>
         </form>
       </div>
       <div id="contactinfo" class="span6 pull-right">
         <h3>Contact info</h3>
-        <p>Our office is at UDEC, the University of Dar es Salaam Entrepreneurship Center. We invite you to get in touch with us to arrange a visit.</p>
+          <p><strong>University of Dar es Salaam Entrepreneurship Center,<br>P.O.Box 110099, Dar es Salaam</strong></p>
+          <strong>Email:</strong> info(at)nxtweb.co.tz<br>
+          <strong>Phone (English):</strong> +255 716 730 511<br>
+          <strong>Phone (Kiswahili):</strong> +255 712 906 062<br>
+        </p>
         <iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=university+of+dar+es+salaam&amp;aq=&amp;sll=37.0625,-95.677068&amp;sspn=47.483365,107.138672&amp;ie=UTF8&amp;hq=&amp;hnear=&amp;ll=-6.780413,39.205314&amp;spn=0.006295,0.006295&amp;t=m&amp;iwloc=A&amp;output=embed"></iframe><br /><small><a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=university+of+dar+es+salaam&amp;aq=&amp;sll=37.0625,-95.677068&amp;sspn=47.483365,107.138672&amp;ie=UTF8&amp;hq=&amp;hnear=&amp;ll=-6.780413,39.205314&amp;spn=0.006295,0.006295&amp;t=m&amp;iwloc=A" style="color:#0000FF;text-align:left">View Larger Map</a></small>
       </div>
     </div>
   </div>
 </div>
-
+    <!-- Order confirmed modal! -->
+    <div id="confirm_modal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">Thanks for your order!</h3>
+    </div>
+    <div class="modal-body">
+    <p>Thank you very much for your request. </br></br>We will review your order and get back to you within 24 hours.</p>
+    </div>
+    <div class="modal-footer">
+    <button data-dismiss="modal" class="button">Close</button>
+    </div>
+    </div>
 <footer>
   <div class="container">
     <div class="row">
       <div class="span12 center">
         <p>Copyright &copy; nxtweb.co.tz<br> 2013.</p>
-      </div>
-    </div>
-    <div class="row">
-      <div class="span12 center social_icons">
-        <a href="#"><i class="icon-facebook" style="color: #3B5998"></i></a>
-        <a href="#"><i class="icon-linkedin" style="color: #4875B4"></i></a>
       </div>
     </div>
   </div>
