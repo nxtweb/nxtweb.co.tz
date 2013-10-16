@@ -78,7 +78,7 @@ h3 {
 
 .logo a h1 {
 	float: left;
-	margin-top: 50px;
+	margin-top: 40px;
 	color: #fff;
 	letter-spacing: 1px;
 	font-size: 30px;
@@ -125,7 +125,7 @@ body#contact a#nav-contact {
 .navi li {
 	display: inline-block;
 	margin-right: 15px;
-	margin-top: 35px;
+	margin-top: 50px;
 }
 
 .navi a {
@@ -257,8 +257,9 @@ body#contact a#nav-contact {
 
 footer {
 	padding: 50px;
-	background: #e0e0e0;
-	border-top: solid 3px #c3c3c3;
+	background: #eee;
+	border-top: solid 1px #c3c3c3;
+	height: 150px;
 }
 
 /*--------------Modals-------------*/
