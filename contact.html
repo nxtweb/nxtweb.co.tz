@@ -13,6 +13,9 @@
   <link rel="stylesheet" href="css/jquery.bxslider.css">
   <link rel="stylesheet" href="css/buttons.css">
   <link rel="stylesheet" href="css/contact.css">
+  <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+  <script type="text/javascript" src="js/jquery.form.js"></script>
+  <script type="text/javascript" src="js/jquery.validate.js"></script>
   <script type="text/javascript" src="js/processform.js"></script>
 
 
@@ -58,23 +61,28 @@
   <div class="container">
     <div class="row">
       <h1 class="headline center">Contact us!</h1>
-      <p id="contact_p">
-        Please feel free to get in touch with us for any inquiries by using any of the methods provided below. We take all inquiries seriously and answer within 24 hours of your request.
-      </p>
+      <h4 class="center">Please feel free to get in touch for any inquiries!</h4>
+      <br><br>
       <div class="span6 pull-left">
         <h3>Request a call</h3>
-        <form id="contactform">
+        <div id="helptext_contact">
+          We take all inquiries seriously and answer within 24 hours of your request.
+        </div>
+        <form id="orderform_contact">
           <br>
+
           <input type="hidden" name="order" value="contact form">
-          <input name="name" type="text" class="modal_input" placeholder="Name">
-          <input name="company" type="text" class="modal_input" placeholder="Company">
-          <input name="phone" type="text" class="modal_input" placeholder="Phone number">
-          <input name="email" type="text" class="modal_input" placeholder="Email">
+          <input name="name" type="text" class="modal_input" placeholder="Name" required>
+          <input name="company" type="text" class="modal_input" placeholder="Company" required>
+          <input name="phone" type="text" class="modal_input" placeholder="Phone number" required>
+          <input name="email" type="text" class="modal_input" placeholder="Email" required>
           <textarea rows="12" id="order_description" name="order_description" placeholder="Describe your request here"></textarea>
           <br>
           <input id="modal_checkbox" type="checkbox" name="subscribe" value="subscribe" checked/> Subscribe to newsletter
-          <br><br>
-          <input href="#confirm_modal" data-dismiss="modal" data-toggle="modal" type="button" id="submit" class="button button-caution" value="Send request!" onClick="sendorder('contactform')"/>
+          <br>
+
+          <br>
+          <input type="submit" id="submit" class="button button-caution" value="Send request!" onClick="sendorder_contact('orderform_contact')"/>
         </form>
       </div>
       <div id="contactinfo" class="span6 pull-right">
@@ -112,7 +120,6 @@
   </div>
 </footer>
 
-<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
 <script type="text/javascript" src="js/bootstrap.js"></script>
 <script type="text/javascript" src="js/jquery.fitvids.js"></script>
 <script type="text/javascript" src="js/jquery.bxslider.min.js"></script>

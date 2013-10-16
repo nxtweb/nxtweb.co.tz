@@ -81,3 +81,6 @@ body#contact a#nav-contact {
    -webkit-transition: color .15s ease-in-out;
 }
 
+.help-block{
+	padding: 10px;
+}

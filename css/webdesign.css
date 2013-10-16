@@ -32,6 +32,17 @@
 	padding: 10px;
 }
 
+.modal .price {
+	text-align: center;
+	background: #ccc;
+	padding: 10px 10px 0px 10px;
+	margin-bottom: 15px;
+}
+
+.modal .price p {
+	padding-bottom:5px;
+}
+
 .slider {
 	margin-top: 35px;
 }
@@ -61,3 +72,4 @@
 	color: #ccc;
 	cursor: pointer;
 }
+

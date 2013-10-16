@@ -13,8 +13,10 @@
   <link rel="stylesheet" href="css/jquery.bxslider.css">
   <link rel="stylesheet" href="css/buttons.css">
   <link rel="stylesheet" href="css/hosting.css">
+  <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+  <script type="text/javascript" src="js/jquery.form.js"></script>
+  <script type="text/javascript" src="js/jquery.validate.js"></script>
   <script type="text/javascript" src="js/processform.js"></script>
-
 
   <!--[if lt IE 9]>
   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -122,14 +124,14 @@
 						<li><i class="icon-dashboard"></i><strong> Bandwidth:</strong> 1GB</li>
 						<li><i class="icon-envelope-alt"></i><strong> Email accounts:</strong> 2</li>
 					</ul>
-		        <form id="orderform_basic" name="orderform" method="post" action="orderform.php">
+		        <form id="orderform_basic" name="orderform_basic" method="post">
 				    <fieldset>
-				    	<span class="help-block"><br>Please fill out the information below to order your Nxt.basic hosting package!</span>
+				    	<span class="help-block" id="helptext_basic">Please fill out the information below to order your Nxt.basic hosting package!</span>
 				    	<input type="hidden" name="order" value="nxt.basic">
-					    <input name="name" type="text" class="modal_input" placeholder="Name">
-					    <input name="company" type="text" class="modal_input" placeholder="Company">
-					    <input name="phone" type="text" class="modal_input" placeholder="Phone number">
-					    <input name="email" type="text" class="modal_input" placeholder="Email">
+					    <input name="name" type="text" class="modal_input" placeholder="Name" required>
+					    <input name="company" type="text" class="modal_input" placeholder="Company" required>
+					    <input name="phone" type="text" class="modal_input" placeholder="Phone number" required>
+					    <input name="email" type="text" class="modal_input" placeholder="Email" required>
 					    <br>
 						<input id="modal_checkbox" type="checkbox" name="subscribe" value="subscribe" checked/> Subscribe to newsletter
 				    </fieldset>
@@ -137,7 +139,7 @@
 					</div>
 					<div class="modal-footer">
 						<button class="button" data-dismiss="modal" aria-hidden="true">Close</button>
-						<input href="#confirm_modal" data-dismiss="modal" data-toggle="modal" type="button" id="submit" class="button button-primary" value="Order package!" onClick="sendorder('orderform_basic')"/>
+						<input type="submit" id="submit" class="button button-primary" value="Order package!" onClick="sendorder_hosting('orderform_basic')"/>
 					</div>
 				</form>
 			</div>
@@ -159,14 +161,14 @@
 						<li><i class="icon-envelope-alt"></i><strong> Email accounts:</strong> 5</li>
 					</ul>
 
-		        <form id="orderform_level" name="orderform" method="post" action="orderform.php">
+		        <form id="orderform_level" name="orderform" method="post">
 				    <fieldset>
-				    	<span class="help-block"><br>Please fill out the information below to order your Nxt.level hosting package!</span>
+				    	<span class="help-block" id="helptext_level">Please fill out the information below to order your Nxt.level hosting package!</span>
 				    	<input type="hidden" name="order" value="nxt.level">
-					    <input name="name" type="text" class="modal_input" placeholder="Name">
-					    <input name="company" type="text" class="modal_input" placeholder="Company">
-					    <input name="phone" type="text" class="modal_input" placeholder="Phone number">
-					    <input name="email" type="text" class="modal_input" placeholder="Email">
+					    <input name="name" type="text" class="modal_input" placeholder="Name" required>
+					    <input name="company" type="text" class="modal_input" placeholder="Company" required>
+					    <input name="phone" type="text" class="modal_input" placeholder="Phone number" required>
+					    <input name="email" type="text" class="modal_input" placeholder="Email" required>
 					    <br>
 						<input id="modal_checkbox" type="checkbox" name="subscribe" value="subscribe" checked/> Subscribe to newsletter
 				    </fieldset>
@@ -174,7 +176,7 @@
 					</div>
 					<div class="modal-footer">
 						<button class="button" data-dismiss="modal" aria-hidden="true">Close</button>
-						<input href="#confirm_modal" data-dismiss="modal" data-toggle="modal" type="button" id="submit" class="button button-primary" value="Order package!" onClick="sendorder('orderform_level')"/>
+							<input type="submit" id="submit" class="button button-primary" value="Order package!" onClick="sendorder_hosting('orderform_level')"/>
 					</div>
 				</form>
 			</div>
@@ -197,14 +199,14 @@
 						<li><i class="icon-envelope-alt"></i><strong> Email accounts:</strong> 20</li>
 					</ul>
 
-		        <form id="orderform_future" name="orderform" method="post" action="orderform.php">
+		        <form id="orderform_future" name="orderform" method="post">
 				    <fieldset>
-				    	<span class="help-block"><br>Please fill out the information below to order your Nxt.future hosting package!</span>
+				    	<span class="help-block" id="helptext_future">Please fill out the information below to order your Nxt.future hosting package!</span>
 				    	<input type="hidden" name="order" value="nxt.future">
-					    <input name="name" type="text" class="modal_input" placeholder="Name">
-					    <input name="company" type="text" class="modal_input" placeholder="Company">
-					    <input name="phone" type="text" class="modal_input" placeholder="Phone number">
-					    <input name="email" type="text" class="modal_input" placeholder="Email">
+					    <input name="name" type="text" class="modal_input" placeholder="Name" required>
+					    <input name="company" type="text" class="modal_input" placeholder="Company" required>
+					    <input name="phone" type="text" class="modal_input" placeholder="Phone number" required>
+					    <input name="email" type="text" class="modal_input" placeholder="Email" required>
 					    <br>
 						<input id="modal_checkbox" type="checkbox" name="subscribe" value="subscribe" checked/> Subscribe to newsletter
 				    </fieldset>
@@ -212,22 +214,12 @@
 					</div>
 					<div class="modal-footer">
 						<button class="button" data-dismiss="modal" aria-hidden="true">Close</button>
-						<input href="#confirm_modal" data-dismiss="modal" data-toggle="modal" type="button" id="submit" class="button button-primary" value="Order package!" onClick="sendorder('orderform_future')"/>
+						<input type="submit" id="submit" class="button button-primary" value="Order package!" onClick="sendorder_hosting('orderform_future')"/>
 					</div>
 				</form>
 			</div>
-		<!-- Order confirmed modal! -->
-		<div id="confirm_modal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-		<div class="modal-header">
-		<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-		<h3 id="myModalLabel">Thanks for your order!</h3>
-		</div>
-		<div class="modal-body">
-		<p>Thank you very much for your order. </br></br>We will review your order and get back to you within 24 hours.</p>
-		</div>
-		<div class="modal-footer">
-		<button data-dismiss="modal" class="button">Close</button>
-		</div>
+
+
 		</div>
 	</div>
 </div>
@@ -242,12 +234,14 @@
 	</div>
 </footer>
 
-<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+
+
 <script type="text/javascript" src="js/bootstrap.js"></script>
 <script type="text/javascript" src="js/jquery.fitvids.js"></script>
 <script type="text/javascript" src="js/jquery.bxslider.min.js"></script>
 <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
 <script type="text/javascript" src="js/buttons.js"></script>
+
 
 
 </body>
