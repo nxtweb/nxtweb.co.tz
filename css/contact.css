@@ -1,5 +1,5 @@
-.fast_contact{
-	background-color: #22A7B3;
+.fast_contact {
+	border: 1px solid #eee;
 }
 
 body#home a#nav-home,
@@ -42,11 +42,12 @@ h3 {
 	background-color:#22A7B3;
 }
 
-.logo a h2 {
-    color: black;
+.logo a h1 {
+    color: #333;
+    margin-top: 50px;
 }
 
-.logo a h2:hover {
+.logo a h1:hover {
     color: rgb(204, 204, 204);
 }
 
@@ -64,14 +65,4 @@ h3 {
 
 #contact_p{
 	margin: 30px;
-}
-
-.fast_contact p:hover, .icon-facebook:hover, .icon-linkedin:hover {
-	color: #333;
-	cursor: pointer;
-}
-
-.fast_contact, .icon-facebook, .icon-linkedin {
-	background: #22A7B3;
-	color: white;
 }

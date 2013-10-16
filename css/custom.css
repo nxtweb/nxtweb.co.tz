@@ -76,9 +76,9 @@ h3 {
 
 /*--------------logo-------------*/
 
-.logo a h2 {
+.logo a h1 {
 	float: left;
-	margin-top: 35px;
+	margin-top: 50px;
 	color: #fff;
 	letter-spacing: 1px;
 	font-size: 30px;
@@ -87,10 +87,9 @@ h3 {
 .icon-logo2:before {
 	content: "\e000";
 	vertical-align: -0.15em;
-	font-size: px;
 }
 
-.logo h2:hover {
+.logo h1:hover {
 	color: #333;
 	transition: color .15s ease-in-out;
    -moz-transition: color .15s ease-in-out;
@@ -183,7 +182,7 @@ body#contact a#nav-contact {
 
 .btn_middle a:hover {
 	text-decoration: none;
-	color: #fff;
+	color: #ccc;
 }
 
 /*--------------section2-------------*/
@@ -256,35 +255,14 @@ body#contact a#nav-contact {
 
 /*--------------footer-------------*/
 
-
 footer {
 	padding: 50px;
 	background: #e0e0e0;
 	border-top: solid 3px #c3c3c3;
 }
 
-/*--------------Social icons-------------*/
+/*--------------Modals-------------*/
 
-.social_icons {
-	font-size: 35px;
-}
-
-.social_icons a:hover {
-	background: none;
-	text-decoration: none;
-}
-
-.social_icons_mini {
-	font-size: 20px;
-	float:left;
-	margin-top: 20px;
-	margin-left: 5px;
-}
-
-.social_icons_mini a:hover {
-	text-decoration: none;
-	color: #e77c08
-}
 
 #modal_checkbox{
 	float: none;
@@ -322,7 +300,33 @@ footer {
 	width: 90%;
 }
 
+/*--------------Fast contact-------------*/
+
+.border {
+	border: 1px solid #fff;
+}
+
 .fast_contact p:hover, .icon-facebook:hover, .icon-linkedin:hover {
 	color: #ccc;
 	cursor: pointer;
+}
+
+.fast_contact a {
+	font-size: 20px;
+}
+
+.socials {
+	margin-top: 3px;
+}
+
+.facebook a {
+	color: #3b5998;
+}
+
+.linkedin a {
+	color: #007bb6;
+}
+
+.googleplus a {
+	color: #dd4b39;
 }
